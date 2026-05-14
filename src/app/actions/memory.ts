@@ -8,7 +8,7 @@ import { redirect } from "next/navigation";
 
 export async function createMemory(formData: FormData) {
   const session = await getServerSession(authOptions);
-  
+
   if (!session || !session.user) {
     throw new Error("Unauthorized");
   }
